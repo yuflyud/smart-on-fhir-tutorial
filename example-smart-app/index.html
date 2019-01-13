@@ -10,6 +10,10 @@
       Temporarily disable cerner-smart-embeddable-lib
       <link rel='stylesheet' type='text/css' href='./lib/css/cerner-smart-embeddable-lib-1.0.0.min.css'>
     -->
+
+<link rel="stylesheet" type="text/css" href="./src/css/util.css">
+<link rel="stylesheet" type="text/css" href="./src/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./src/css/main.css">
   </head>
   <body>
     <div id='errors'>
@@ -20,52 +24,51 @@
       <div class="bounce3"></div>
     </div>
     <div id='holder' >
-      <h2>Yuriys-Example-SMART-App</h2>
 
-      <h2>Patient Resource</h2>
-      <table>
-        <tr>
-          <th>First Name:</th>
-          <td id='fname'></td>
-        </tr>
-        <tr>
-          <th>Last Name:</th>
-          <td id='lname'></td>
-        </tr>
-        <tr>
-          <th>Gender:</th>
-          <td id='gender'></td>
-        </tr>
-        <tr>
-          <th>Date of Birth:</th>
-          <td id='birthdate'></td>
-        </tr>
-      </table>
-      <h2>Observation Resource</h2>
-      <table>
-        <tr>
-          <th>Height:</th>
-          <td id='height'></td>
-        </tr>
-        <tr>
-          <th>Systolic Blood Pressure:</th>
-          <td id='systolicbp'></td>
+      <div class="row">
+        <div class="column">
+          <img src="./src/images/healthlx_logo.jpg" style="height:70px">
+        </div>
+        <div class="column">
+          <img src="./src/images/davinci_logo.jpg" style="height:70px">
+        </div>
+      </div>
 
-        </tr>
-        <tr>
-          <th>Diastolic Blood Pressure:</th>
-          <td id='diastolicbp'></td>
-        </tr>
-        <tr>
-          <th>LDL:</th>
-          <td id='ldl'></td>
-        </tr>
-        <tr>
-          <th>HDL:</th>
-          <td id='hdl'></td>
-        </tr>
+      <div class="container-table100">
+      <div class="wrap-table100">
+      <div class="table100 ver1 m-b-110">
+      <table data-vertable="ver1">
+      <thead>
+      <tr class="row100 head">
+      <th class="column100 column1" data-column="column1">Patient Resource</th>
+      <th class="column100 column2" data-column="column2"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="row100">
+      <td class="column100 column1" data-column="column1"><b>First Name:</b></td>
+      <td class="column100 column2" data-column="column2" id="fname"></td>
+      </tr>
+      <tr class="row100">
+      <td class="column100 column1" data-column="column1"><b>Last Name:</b></td>
+      <td class="column100 column2" data-column="column2" id="lname"></td>
+      </tr>
+       <tr class="row100">
+      <td class="column100 column1" data-column="column1"><b>Gender:</b></td>
+      <td class="column100 column2" data-column="column2" id="gender"></td>
+      </tr>
+      <tr class="row100">
+      <td class="column100 column1" data-column="column1"><b>Date of Birth:</b></td>
+      <td class="column100 column2" data-column="column2" id="birthdate"></td>
+      </tr>
+      </tbody>
       </table>
-    </div>
+      </div>
+
+
+      </div>
+      </div>
+          </div>
     <!-- Required JS files to enable this page to embed within an MPage -->
     <!--
       Temporarily disable cerner-smart-embeddable-lib
@@ -89,7 +92,6 @@
         function(p) {
           drawVisualization(p);
         },
-
         //Display 'Failed to call FHIR Service' if extractData failed
         function() {
           $('#loading').hide();
